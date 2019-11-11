@@ -365,13 +365,13 @@ myobj&lt;- setParams(myobj, x)</code></pre>
 <pre><code>## From setParams.HRMtree: The parameters have been attached to the edges according to their names</code></pre>
 <pre class="r"><code>X&lt;- rHRMtree(myobj, 1000, noise = TRUE)
 head(X)</code></pre>
-<pre><code>##               a          b          c          d         e
-## [1,]  31.925820  32.518942  17.926179  31.402702 34.972248
-## [2,] 173.545197 184.695248 174.169098 154.549287 78.685490
-## [3,]   2.066322   1.473954   1.516543   1.369282  4.476791
-## [4,]   2.548845   2.743852   2.037162   2.253926  2.135285
-## [5,]   3.044192   2.899816   3.277767   3.826205  3.250604
-## [6,]   3.738322   2.316306   4.124339   2.137612  2.481976</code></pre>
+<pre><code>##               a           b          c           d           e
+## [1,]   1.759972   0.7092501   1.676201   0.9955269   0.8790075
+## [2,]   2.339825   2.1089709   3.353121   1.7474982   1.2273866
+## [3,]   1.754235   1.4671201   2.205957   2.1027381   1.7863237
+## [4,]  99.009737 101.0267331 147.526588  95.2169357  46.3729596
+## [5,] 136.431109 144.4130372 129.504976 179.0715259 117.2349166
+## [6,]   2.507747   1.6893969   1.621765   2.2332948   3.6757986</code></pre>
 </div>
 <div id="step-3-create-the-subsets" class="section level3">
 <h3>Step 3 Create the subsets</h3>
@@ -417,7 +417,7 @@ rdsobj&lt;- setRootDepSet(rdsobj, list(c(&quot;a&quot;, &quot;b&quot;),
 suppressMessages(mmeobj&lt;- estimate(mmeobj, X, rdsobj, k_ratio))
 mmeobj$depParams</code></pre>
 <pre><code>##         e1         e2         e3         e4 
-## 0.01274829 0.03224076 0.04415460 0.16854262</code></pre>
+## 0.01232482 0.07249932 0.05122398 0.22121276</code></pre>
 <p>The vector above is the estimate of <span class="math inline">\(\theta\)</span>. The true parameter is <span class="math inline">\((0.1, 0.3, 0.2, 0.5)\)</span>, but this is estimate based on one sample and a certain <span class="math inline">\(k\)</span>, the number of the upper order statistics.</p>
 </div>
 
